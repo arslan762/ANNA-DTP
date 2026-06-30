@@ -122,26 +122,27 @@ export default function PricingPage() {
 
       {/* HERO */}
 
-      <section className="relative py-32 border-b border-white/10">
+      <section className="relative py-24 md:py-32 border-b border-white/10 overflow-hidden">
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,182,212,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.18),transparent_35%)]"></div>
 
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 text-center">
 
-          <p className="uppercase tracking-[0.3em] text-cyan-400 mb-8">
+          <p className="uppercase tracking-[0.25em] md:tracking-[0.3em] text-cyan-400 mb-6 md:mb-8 text-xs sm:text-sm">
             Pricing & Deployment
           </p>
 
-          <h1 className="text-5xl md:text-6xl lg:text-[88px] font-black leading-[0.92] max-w-[1100px] mx-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[88px] font-black leading-[1] max-w-[1100px] mx-auto">
 
             AI-Native
+
             <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
               Telecom Intelligence Pricing
             </span>
 
           </h1>
 
-          <p className="text-gray-300 text-xl leading-relaxed mt-10 max-w-4xl mx-auto">
+          <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mt-8 md:mt-10 max-w-4xl mx-auto">
             Flexible subscription and infrastructure licensing
             designed for researchers, enterprises, telecom operators,
             and future AI-native programmable telecom ecosystems.
@@ -153,11 +154,11 @@ export default function PricingPage() {
 
       {/* PRICING */}
 
-      <section className="py-28">
+      <section className="py-20 md:py-28">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
 
             {plans.map((plan, i) => {
               const Icon = plan.icon;
@@ -166,7 +167,7 @@ export default function PricingPage() {
                 <motion.div
                   key={i}
                   whileHover={{ y: -10 }}
-                  className={`relative rounded-[40px] p-10 border overflow-hidden flex flex-col ${
+                  className={`relative rounded-[28px] md:rounded-[40px] p-6 md:p-10 border overflow-hidden flex flex-col ${
                     plan.featured
                       ? "border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-purple-500/10"
                       : "border-white/10 bg-white/[0.03]"
@@ -174,75 +175,80 @@ export default function PricingPage() {
                 >
 
                   {plan.featured && (
-                    <div className="absolute top-0 right-0 px-5 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-sm font-semibold rounded-bl-2xl">
+                    <div className="absolute top-0 right-0 px-4 md:px-5 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-[10px] md:text-sm font-semibold rounded-bl-2xl">
                       MOST POPULAR
                     </div>
                   )}
 
-                  <div className="w-20 h-20 rounded-3xl bg-cyan-500/10 flex items-center justify-center mb-8">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-cyan-500/10 flex items-center justify-center mb-6 md:mb-8">
 
                     <Icon
-                      size={42}
-                      className="text-cyan-400"
+                      size={36}
+                      className="text-cyan-400 md:w-[42px] md:h-[42px]"
                     />
 
                   </div>
 
-                  <div className="inline-block px-5 py-2 rounded-full border border-cyan-400/20 text-cyan-400 text-sm tracking-widest uppercase mb-6">
+                  <div className="inline-block px-4 md:px-5 py-2 rounded-full border border-cyan-400/20 text-cyan-400 text-[10px] md:text-sm tracking-widest uppercase mb-5 md:mb-6">
 
                     {plan.badge}
 
                   </div>
 
-                  <h2 className="text-4xl font-black mb-6">
+                  <h2 className="text-3xl md:text-4xl font-black mb-5 md:mb-6 leading-tight">
                     {plan.title}
                   </h2>
 
                   {!plan.custom ? (
-                    <div className="mb-8">
+                    <div className="mb-6 md:mb-8">
 
                       {plan.monthly && (
-                        <h3 className="text-5xl font-black">
+                        <h3 className="text-4xl sm:text-5xl font-black leading-tight">
                           {plan.monthly}
-                          <span className="text-lg text-gray-400 font-medium">
+
+                          <span className="block sm:inline text-base md:text-lg text-gray-400 font-medium sm:ml-2">
                             /month
                           </span>
+
                         </h3>
                       )}
 
                       {!plan.monthly && plan.yearly && (
-                        <h3 className="text-4xl font-black">
+                        <h3 className="text-3xl md:text-4xl font-black leading-tight">
                           {plan.yearly}
                         </h3>
                       )}
 
                       {plan.yearly && plan.monthly && (
-                        <p className="text-gray-400 mt-3">
+                        <p className="text-gray-400 mt-3 text-sm md:text-base">
                           {plan.yearly}
                         </p>
                       )}
 
                       {plan.biyearly && (
-                        <p className="text-gray-500 mt-1">
+                        <p className="text-gray-500 mt-1 text-sm md:text-base">
                           {plan.biyearly}
                         </p>
                       )}
 
                     </div>
                   ) : (
-                    <div className="mb-8">
+                    <div className="mb-6 md:mb-8">
 
-                      <h3 className="text-4xl font-black leading-tight">
+                      <h3 className="text-3xl md:text-4xl font-black leading-tight">
+
                         Custom
-                        <span className="block text-cyan-400">
+
+                        <span className="block text-cyan-400 mt-2">
                           Infrastructure Licensing
                         </span>
+
                       </h3>
 
                     </div>
                   )}
 
-                  <p className="text-gray-300 leading-relaxed mb-8">
+                  <p className="text-gray-300 leading-relaxed mb-6 md:mb-8 text-sm sm:text-base">
                     {plan.description}
                   </p>
 
@@ -251,15 +257,15 @@ export default function PricingPage() {
                     {plan.features.map((feature, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-4"
+                        className="flex items-start gap-3 md:gap-4"
                       >
 
                         <CheckCircle2
-                          size={22}
-                          className="text-cyan-400 mt-1"
+                          size={20}
+                          className="text-cyan-400 mt-1 flex-shrink-0"
                         />
 
-                        <p className="text-gray-300">
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                           {feature}
                         </p>
 
@@ -272,7 +278,7 @@ export default function PricingPage() {
                     onClick={() => {
                       window.location.href = "/contact";
                     }}
-                    className="mt-10 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 font-semibold text-lg hover:scale-[1.02] transition duration-300"
+                    className="mt-8 md:mt-10 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 font-semibold text-base md:text-lg hover:scale-[1.02] transition duration-300"
                   >
 
                     {plan.button}

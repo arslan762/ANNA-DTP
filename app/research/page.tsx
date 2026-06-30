@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import {
   BrainCircuit,
   Database,
-  Cpu,
   Radar,
   Workflow,
   GraduationCap,
@@ -113,30 +112,36 @@ export default function ResearchPage() {
 
       {/* HERO */}
 
-      <section className="relative min-h-screen flex items-center border-b border-white/10">
+      <section className="relative min-h-screen flex items-center border-b border-white/10 overflow-hidden">
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,182,212,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.18),transparent_35%)]"></div>
 
-        <div className="max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-20 items-center relative z-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          {/* LEFT SIDE */}
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            className="w-full"
           >
 
-            <p className="uppercase tracking-[0.3em] text-cyan-400 mb-8">
+            <p className="uppercase tracking-[0.25em] md:tracking-[0.3em] text-cyan-400 mb-6 md:mb-8 text-xs sm:text-sm">
               Research Ecosystem
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-[88px] font-black leading-[0.92] max-w-[750px]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[88px] font-black leading-[1] max-w-[750px]">
+
               AI-Native
+
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
                 Telecom Research
               </span>
+
             </h1>
 
-            <p className="text-gray-300 text-xl leading-relaxed mt-10 max-w-2xl">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mt-8 md:mt-10 max-w-2xl">
               ANNA-DTP research focuses on scalable telecom intelligence,
               digital twinning, AI-native orchestration, synthetic telecom
               ecosystems, and future autonomous network infrastructures
@@ -145,34 +150,36 @@ export default function ResearchPage() {
 
           </motion.div>
 
+          {/* RIGHT SIDE */}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="glass rounded-[40px] p-10 border border-white/10"
+            className="rounded-[30px] md:rounded-[40px] p-5 sm:p-6 md:p-10 border border-white/10 bg-white/[0.03] backdrop-blur-xl"
           >
 
-            <div className="grid grid-cols-2 gap-8 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mb-6 md:mb-8">
 
-              <div className="glass rounded-3xl p-10 min-h-[240px] flex flex-col justify-between">
+              <div className="rounded-[24px] md:rounded-3xl p-6 md:p-10 min-h-[220px] md:min-h-[240px] border border-white/10 bg-white/[0.03] flex flex-col justify-between">
 
-                <p className="text-cyan-400 text-lg">
+                <p className="text-cyan-400 text-base md:text-lg">
                   Research Domains
                 </p>
 
-                <h3 className="text-4xl lg:text-[52px] font-black leading-[0.95]">
+                <h3 className="text-3xl sm:text-4xl lg:text-[52px] font-black leading-[1]">
                   AI-Native
                 </h3>
 
               </div>
 
-              <div className="glass rounded-3xl p-10 min-h-[240px] flex flex-col justify-between">
+              <div className="rounded-[24px] md:rounded-3xl p-6 md:p-10 min-h-[220px] md:min-h-[240px] border border-white/10 bg-white/[0.03] flex flex-col justify-between">
 
-                <p className="text-purple-400 text-lg">
+                <p className="text-purple-400 text-base md:text-lg">
                   Publications
                 </p>
 
-                <h3 className="text-4xl lg:text-[46px] font-black leading-[0.95] whitespace-nowrap">
+                <h3 className="text-3xl sm:text-4xl lg:text-[46px] font-black leading-[1]">
                   IEEE
                 </h3>
 
@@ -180,20 +187,20 @@ export default function ResearchPage() {
 
             </div>
 
-            <div className="h-[360px] rounded-[40px] bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-white/10 flex items-center justify-center">
+            <div className="min-h-[320px] md:h-[360px] rounded-[30px] md:rounded-[40px] bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-white/10 flex items-center justify-center">
 
-              <div className="text-center px-8">
+              <div className="text-center px-5 md:px-8">
 
                 <GraduationCap
-                  size={90}
-                  className="mx-auto text-cyan-400 mb-8"
+                  size={70}
+                  className="mx-auto text-cyan-400 mb-6 md:mb-8 md:w-[90px] md:h-[90px]"
                 />
 
-                <h3 className="text-4xl font-black">
+                <h3 className="text-3xl sm:text-4xl font-black leading-tight">
                   Future Telecom Intelligence
                 </h3>
 
-                <p className="text-gray-300 text-lg mt-5">
+                <p className="text-gray-300 text-base md:text-lg mt-5 leading-relaxed">
                   Digital Twinning • AI-Native Networks •
                   Autonomous Telecom Intelligence
                 </p>
@@ -210,24 +217,24 @@ export default function ResearchPage() {
 
       {/* RESEARCH DOMAINS */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <h2 className="text-6xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black">
               Core Research Domains
             </h2>
 
-            <p className="text-gray-400 text-xl mt-8 max-w-5xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-5xl mx-auto leading-relaxed">
               Advancing scalable AI-native telecom intelligence
               and future programmable network ecosystems.
             </p>
 
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
 
             {domains.map((item, i) => {
               const Icon = item.icon;
@@ -236,15 +243,15 @@ export default function ResearchPage() {
                 <motion.div
                   key={i}
                   whileHover={{ y: -10 }}
-                  className="glass rounded-[35px] p-10 border border-white/10"
+                  className="rounded-[28px] md:rounded-[35px] p-6 md:p-10 border border-white/10 bg-white/[0.03]"
                 >
 
                   <Icon
-                    size={65}
-                    className="text-cyan-400 mb-8"
+                    size={60}
+                    className="text-cyan-400 mb-6 md:mb-8"
                   />
 
-                  <h3 className="text-3xl font-black mb-8">
+                  <h3 className="text-2xl md:text-3xl font-black mb-6 md:mb-8 leading-tight">
                     {item.title}
                   </h3>
 
@@ -253,7 +260,7 @@ export default function ResearchPage() {
                     {item.points.map((point, idx) => (
                       <li
                         key={idx}
-                        className="text-gray-300 flex gap-3"
+                        className="text-gray-300 flex gap-3 text-sm sm:text-base"
                       >
                         <span className="text-cyan-400">•</span>
                         {point}
@@ -274,23 +281,23 @@ export default function ResearchPage() {
 
       {/* PUBLICATIONS */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <h2 className="text-6xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black">
               ANNA in Action
             </h2>
 
-            <p className="text-gray-400 text-xl mt-8 max-w-4xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-4xl mx-auto leading-relaxed">
               Publications underpinning ANNA-DTP in REC Engine Framework
             </p>
 
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
 
             {papers.map((paper, i) => (
               <motion.a
@@ -299,33 +306,33 @@ export default function ResearchPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -6 }}
-                className="glass rounded-[35px] p-10 border border-white/10 block"
+                className="rounded-[28px] md:rounded-[35px] p-6 md:p-10 border border-white/10 block bg-white/[0.03]"
               >
 
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 md:gap-8">
 
                   <div className="flex-1">
 
-                    <div className="flex items-center gap-4 mb-6">
+                    <div className="flex flex-wrap items-center gap-4 mb-5 md:mb-6">
 
-                      <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center">
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center">
                         <FileText
-                          size={30}
+                          size={28}
                           className="text-cyan-400"
                         />
                       </div>
 
-                      <div className="px-5 py-2 rounded-full border border-cyan-400/20 text-cyan-400 text-sm tracking-widest uppercase">
+                      <div className="px-4 md:px-5 py-2 rounded-full border border-cyan-400/20 text-cyan-400 text-xs md:text-sm tracking-widest uppercase">
                         {paper.publication}
                       </div>
 
                     </div>
 
-                    <h3 className="text-3xl font-black leading-tight hover:text-cyan-400 transition duration-300">
+                    <h3 className="text-2xl md:text-3xl font-black leading-tight hover:text-cyan-400 transition duration-300">
                       {paper.title}
                     </h3>
 
-                    <p className="text-gray-400 mt-5 text-lg">
+                    <p className="text-gray-400 mt-4 md:mt-5 text-base md:text-lg">
                       {paper.domain}
                     </p>
 
@@ -333,7 +340,7 @@ export default function ResearchPage() {
 
                   <div className="flex items-center">
 
-                    <div className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold">
+                    <div className="px-6 md:px-8 py-3 md:py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold text-sm md:text-base">
                       View Publication
                     </div>
 
@@ -352,42 +359,42 @@ export default function ResearchPage() {
 
       {/* RESEARCH VALIDATION */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <h2 className="text-6xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black">
               Research Validation
             </h2>
 
-            <p className="text-gray-400 text-xl mt-8 max-w-5xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-5xl mx-auto leading-relaxed">
               Benchmark-driven validation across scalable
               telecom digital twin environments.
             </p>
 
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
 
             {metrics.map((metric, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                className="glass rounded-[40px] p-14 text-center"
+                className="rounded-[28px] md:rounded-[40px] p-8 md:p-14 text-center border border-white/10 bg-white/[0.03]"
               >
 
                 <BarChart3
-                  size={70}
-                  className="mx-auto text-cyan-400 mb-8"
+                  size={60}
+                  className="mx-auto text-cyan-400 mb-6 md:mb-8"
                 />
 
-                <h3 className="text-6xl font-black">
+                <h3 className="text-4xl sm:text-5xl md:text-6xl font-black">
                   {metric.value}
                 </h3>
 
-                <p className="text-gray-300 text-xl mt-6">
+                <p className="text-gray-300 text-base md:text-xl mt-5 md:mt-6">
                   {metric.label}
                 </p>
 
@@ -402,15 +409,15 @@ export default function ResearchPage() {
 
       {/* LONG TERM VISION */}
 
-      <section className="py-32">
+      <section className="py-20 md:py-32">
 
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 text-center">
 
-          <h2 className="text-6xl font-black">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
             Long-Term Research Vision
           </h2>
 
-          <p className="text-gray-300 text-2xl leading-relaxed max-w-5xl mx-auto mt-12">
+          <p className="text-gray-300 text-base sm:text-lg md:text-2xl leading-relaxed max-w-5xl mx-auto mt-8 md:mt-12">
             ANNA-DTP is positioned as a foundational research
             and operational intelligence infrastructure for
             future AI-native telecom ecosystems, enabling
@@ -419,20 +426,20 @@ export default function ResearchPage() {
             future 6G-native network operations.
           </p>
 
-          <div className="mt-16 h-[380px] rounded-[50px] border border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
+          <div className="mt-12 md:mt-16 min-h-[320px] md:h-[380px] rounded-[32px] md:rounded-[50px] border border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
 
-            <div className="text-center px-10">
+            <div className="text-center px-5 md:px-10">
 
               <Zap
-                size={90}
-                className="mx-auto text-cyan-400 mb-8"
+                size={70}
+                className="mx-auto text-cyan-400 mb-6 md:mb-8 md:w-[90px] md:h-[90px]"
               />
 
-              <h3 className="text-5xl font-black">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
                 Future AI-Native Telecom Ecosystems
               </h3>
 
-              <p className="text-gray-300 text-xl mt-6 max-w-4xl">
+              <p className="text-gray-300 text-base md:text-xl mt-5 md:mt-6 max-w-4xl leading-relaxed">
                 Autonomous orchestration • programmable infrastructure •
                 scalable telecom intelligence • digital twinning •
                 future 6G ecosystems

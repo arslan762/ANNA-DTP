@@ -16,7 +16,7 @@ export default function ContactPage() {
 
       {/* HERO SECTION */}
 
-      <section className="relative min-h-screen flex items-center border-b border-white/10">
+      <section className="relative min-h-screen flex items-center border-b border-white/10 overflow-hidden">
 
         {/* GRADIENT BACKGROUND */}
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
 
         {/* CONTENT */}
 
-        <div className="relative z-10 max-w-[1450px] mx-auto px-8 py-32 grid lg:grid-cols-[1fr_1fr] gap-16 items-center">
+        <div className="relative z-10 max-w-[1450px] mx-auto px-5 md:px-8 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
 
           {/* LEFT SIDE */}
 
@@ -32,14 +32,14 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="max-w-[700px]"
+            className="w-full max-w-[700px]"
           >
 
-            <p className="uppercase tracking-[0.35em] text-cyan-400 mb-8">
+            <p className="uppercase tracking-[0.25em] md:tracking-[0.35em] text-cyan-400 mb-6 md:mb-8 text-xs sm:text-sm">
               Enterprise Contact
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-[82px] font-black leading-[0.92]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[82px] font-black leading-[1]">
 
               Connect With
 
@@ -49,22 +49,22 @@ export default function ContactPage() {
 
             </h1>
 
-            <p className="text-gray-300 text-xl leading-relaxed mt-10 max-w-2xl">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mt-8 md:mt-10 max-w-2xl">
               Explore enterprise telecom AI infrastructure,
               REC digital twins, autonomous orchestration,
               synthetic telecom intelligence, strategic collaboration,
               and future programmable telecom ecosystems.
             </p>
 
-            <div className="flex flex-wrap gap-6 mt-12">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 mt-10 md:mt-12">
 
-              <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 font-semibold hover:opacity-90 transition">
+              <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 font-semibold hover:opacity-90 transition">
 
                 Request Enterprise Demo
 
               </button>
 
-              <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition font-semibold">
+              <button className="w-full sm:w-auto px-8 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition font-semibold">
 
                 Schedule Consultation
 
@@ -80,23 +80,24 @@ export default function ContactPage() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
+            className="w-full"
           >
 
-            <div className="rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8">
+            <div className="rounded-[30px] md:rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-5 sm:p-6 md:p-8">
 
               {/* TOP CARDS */}
 
-              <div className="grid grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mb-6 md:mb-8">
 
                 {/* CARD 1 */}
 
-                <div className="rounded-[30px] bg-white/[0.04] border border-white/10 p-8 min-h-[260px] flex flex-col justify-between">
+                <div className="rounded-[24px] md:rounded-[30px] bg-white/[0.04] border border-white/10 p-6 md:p-8 min-h-[220px] md:min-h-[260px] flex flex-col justify-between">
 
-                  <p className="text-cyan-400 text-lg">
+                  <p className="text-cyan-400 text-base md:text-lg">
                     Enterprise
                   </p>
 
-                  <h2 className="text-4xl lg:text-5xl font-black leading-tight">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
 
                     Global
 
@@ -110,13 +111,13 @@ export default function ContactPage() {
 
                 {/* CARD 2 */}
 
-                <div className="rounded-[30px] bg-white/[0.04] border border-white/10 p-8 min-h-[260px] flex flex-col justify-between">
+                <div className="rounded-[24px] md:rounded-[30px] bg-white/[0.04] border border-white/10 p-6 md:p-8 min-h-[220px] md:min-h-[260px] flex flex-col justify-between">
 
-                  <p className="text-purple-400 text-lg">
+                  <p className="text-purple-400 text-base md:text-lg">
                     Collaboration
                   </p>
 
-                  <h2 className="text-4xl lg:text-5xl font-black leading-tight">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
 
                     Strategic
 
@@ -132,16 +133,16 @@ export default function ContactPage() {
 
               {/* LARGE CARD */}
 
-              <div className="rounded-[40px] h-[360px] bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10 flex items-center justify-center">
+              <div className="rounded-[28px] md:rounded-[40px] min-h-[320px] md:h-[360px] bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10 flex items-center justify-center">
 
-                <div className="text-center px-10">
+                <div className="text-center px-5 md:px-10">
 
                   <Network
-                    size={90}
-                    className="mx-auto text-cyan-400 mb-8"
+                    size={70}
+                    className="mx-auto text-cyan-400 mb-6 md:mb-8 md:w-[90px] md:h-[90px]"
                   />
 
-                  <h2 className="text-4xl lg:text-5xl font-black leading-tight">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
 
                     Enterprise Telecom
 
@@ -151,7 +152,7 @@ export default function ContactPage() {
 
                   </h2>
 
-                  <p className="text-gray-300 text-lg mt-6">
+                  <p className="text-gray-300 text-base md:text-lg mt-5 md:mt-6 leading-relaxed">
                     Collaboration • orchestration • innovation •
                     AI-native telecom ecosystems
                   </p>
@@ -170,17 +171,17 @@ export default function ContactPage() {
 
       {/* CONTACT FORM */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-20">
+          <div className="text-center mb-14 md:mb-20">
 
-            <p className="uppercase tracking-[0.35em] text-cyan-400 mb-8">
+            <p className="uppercase tracking-[0.25em] md:tracking-[0.35em] text-cyan-400 mb-6 md:mb-8 text-xs sm:text-sm">
               Contact & Queries
             </p>
 
-            <h2 className="text-5xl md:text-6xl font-black leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
 
               Submit Your
 
@@ -190,7 +191,7 @@ export default function ContactPage() {
 
             </h2>
 
-            <p className="text-gray-300 text-xl mt-8 max-w-3xl mx-auto">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-3xl mx-auto leading-relaxed">
               Contact the ANNA-DTP team regarding enterprise deployment,
               partnerships, telecom AI research, pricing,
               infrastructure, collaboration, and platform access.
@@ -200,38 +201,38 @@ export default function ContactPage() {
 
           {/* FORM CONTAINER */}
 
-          <div className="rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-10">
+          <div className="rounded-[30px] md:rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-5 sm:p-6 md:p-10">
 
-            <form className="space-y-8">
+            <form className="space-y-6 md:space-y-8">
 
               {/* NAME + EMAIL */}
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <div>
 
-                  <label className="block text-gray-300 mb-3 text-lg">
+                  <label className="block text-gray-300 mb-3 text-base md:text-lg">
                     Full Name
                   </label>
 
                   <input
                     type="text"
                     placeholder="Enter your full name"
-                    className="w-full bg-black/30 border border-white/10 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+                    className="w-full bg-black/30 border border-white/10 rounded-2xl px-5 md:px-6 py-4 md:py-5 text-white outline-none focus:border-cyan-400 transition"
                   />
 
                 </div>
 
                 <div>
 
-                  <label className="block text-gray-300 mb-3 text-lg">
+                  <label className="block text-gray-300 mb-3 text-base md:text-lg">
                     Email Address
                   </label>
 
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full bg-black/30 border border-white/10 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+                    className="w-full bg-black/30 border border-white/10 rounded-2xl px-5 md:px-6 py-4 md:py-5 text-white outline-none focus:border-cyan-400 transition"
                   />
 
                 </div>
@@ -242,14 +243,14 @@ export default function ContactPage() {
 
               <div>
 
-                <label className="block text-gray-300 mb-3 text-lg">
+                <label className="block text-gray-300 mb-3 text-base md:text-lg">
                   Organization / Company
                 </label>
 
                 <input
                   type="text"
                   placeholder="Enter organization name"
-                  className="w-full bg-black/30 border border-white/10 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+                  className="w-full bg-black/30 border border-white/10 rounded-2xl px-5 md:px-6 py-4 md:py-5 text-white outline-none focus:border-cyan-400 transition"
                 />
 
               </div>
@@ -258,14 +259,14 @@ export default function ContactPage() {
 
               <div>
 
-                <label className="block text-gray-300 mb-3 text-lg">
+                <label className="block text-gray-300 mb-3 text-base md:text-lg">
                   Subject
                 </label>
 
                 <input
                   type="text"
                   placeholder="Enter query subject"
-                  className="w-full bg-black/30 border border-white/10 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition"
+                  className="w-full bg-black/30 border border-white/10 rounded-2xl px-5 md:px-6 py-4 md:py-5 text-white outline-none focus:border-cyan-400 transition"
                 />
 
               </div>
@@ -274,14 +275,14 @@ export default function ContactPage() {
 
               <div>
 
-                <label className="block text-gray-300 mb-3 text-lg">
+                <label className="block text-gray-300 mb-3 text-base md:text-lg">
                   Your Query
                 </label>
 
                 <textarea
                   rows={7}
                   placeholder="Describe your enterprise, research, or platform query..."
-                  className="w-full bg-black/30 border border-white/10 rounded-2xl px-6 py-5 text-white outline-none focus:border-cyan-400 transition resize-none"
+                  className="w-full bg-black/30 border border-white/10 rounded-2xl px-5 md:px-6 py-4 md:py-5 text-white outline-none focus:border-cyan-400 transition resize-none"
                 />
 
               </div>
@@ -290,7 +291,7 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="w-full py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 text-xl font-semibold hover:opacity-90 transition"
+                className="w-full py-4 md:py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 text-lg md:text-xl font-semibold hover:opacity-90 transition"
               >
 
                 Submit Enterprise Query
@@ -307,17 +308,17 @@ export default function ContactPage() {
 
       {/* ENTERPRISE CARDS */}
 
-      <section className="py-32">
+      <section className="py-20 md:py-32">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <p className="uppercase tracking-[0.35em] text-cyan-400 mb-8">
+            <p className="uppercase tracking-[0.25em] md:tracking-[0.35em] text-cyan-400 mb-6 md:mb-8 text-xs sm:text-sm">
               Enterprise Collaboration
             </p>
 
-            <h2 className="text-5xl md:text-6xl font-black leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
 
               Partner With
 
@@ -329,25 +330,25 @@ export default function ContactPage() {
 
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
 
             {/* ENTERPRISE */}
 
             <motion.div
               whileHover={{ y: -8 }}
-              className="rounded-[35px] border border-white/10 bg-white/[0.03] p-10"
+              className="rounded-[28px] md:rounded-[35px] border border-white/10 bg-white/[0.03] p-6 md:p-10"
             >
 
               <Building2
-                size={60}
-                className="text-cyan-400 mb-8"
+                size={55}
+                className="text-cyan-400 mb-6 md:mb-8"
               />
 
-              <h3 className="text-3xl font-black mb-6">
+              <h3 className="text-2xl md:text-3xl font-black mb-5 md:mb-6">
                 Enterprise Deployment
               </h3>
 
-              <p className="text-gray-300 leading-relaxed mb-10">
+              <p className="text-gray-300 leading-relaxed mb-8 md:mb-10 text-sm sm:text-base">
                 Deploy scalable AI-native telecom intelligence
                 infrastructure across operators, telecom vendors,
                 and enterprise ecosystems.
@@ -366,19 +367,19 @@ export default function ContactPage() {
 
             <motion.div
               whileHover={{ y: -8 }}
-              className="rounded-[35px] border border-white/10 bg-white/[0.03] p-10"
+              className="rounded-[28px] md:rounded-[35px] border border-white/10 bg-white/[0.03] p-6 md:p-10"
             >
 
               <Globe
-                size={60}
-                className="text-purple-400 mb-8"
+                size={55}
+                className="text-purple-400 mb-6 md:mb-8"
               />
 
-              <h3 className="text-3xl font-black mb-6">
+              <h3 className="text-2xl md:text-3xl font-black mb-5 md:mb-6">
                 Research Collaboration
               </h3>
 
-              <p className="text-gray-300 leading-relaxed mb-10">
+              <p className="text-gray-300 leading-relaxed mb-8 md:mb-10 text-sm sm:text-base">
                 Collaborate on REC digital twins, telecom AI,
                 synthetic intelligence, and future programmable networks.
               </p>
@@ -396,19 +397,19 @@ export default function ContactPage() {
 
             <motion.div
               whileHover={{ y: -8 }}
-              className="rounded-[35px] border border-white/10 bg-white/[0.03] p-10"
+              className="rounded-[28px] md:rounded-[35px] border border-white/10 bg-white/[0.03] p-6 md:p-10"
             >
 
               <Mail
-                size={60}
-                className="text-cyan-400 mb-8"
+                size={55}
+                className="text-cyan-400 mb-6 md:mb-8"
               />
 
-              <h3 className="text-3xl font-black mb-6">
+              <h3 className="text-2xl md:text-3xl font-black mb-5 md:mb-6">
                 Strategic Consultation
               </h3>
 
-              <p className="text-gray-300 leading-relaxed mb-10">
+              <p className="text-gray-300 leading-relaxed mb-8 md:mb-10 text-sm sm:text-base">
                 Discuss zero-touch automation,
                 AI-native orchestration, and
                 next-generation telecom intelligence infrastructure.

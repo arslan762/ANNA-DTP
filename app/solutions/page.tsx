@@ -106,11 +106,11 @@ export default function SolutionsPage() {
 
       {/* HERO */}
 
-      <section className="relative min-h-screen flex items-center pt-32 border-b border-white/10">
+      <section className="relative min-h-screen flex items-center pt-28 md:pt-32 border-b border-white/10 overflow-hidden">
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,182,212,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.18),transparent_35%)]"></div>
 
-        <div className="max-w-[1450px] mx-auto px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center relative z-10">
+        <div className="relative z-10 max-w-[1450px] mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center">
 
           {/* LEFT */}
 
@@ -118,14 +118,14 @@ export default function SolutionsPage() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="max-w-[650px]"
+            className="w-full max-w-[650px]"
           >
 
-            <p className="uppercase tracking-[0.3em] text-cyan-400 mb-6 text-sm">
+            <p className="uppercase tracking-[0.25em] md:tracking-[0.3em] text-cyan-400 mb-5 md:mb-6 text-xs sm:text-sm">
               Enterprise Telecom Solutions
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-[72px] font-black leading-[0.95]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-black leading-[1]">
 
               AI-Native
 
@@ -135,7 +135,7 @@ export default function SolutionsPage() {
 
             </h1>
 
-            <p className="text-gray-300 text-xl mt-10 leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl mt-8 md:mt-10 leading-relaxed">
 
               ANNA-DTP enables scalable telecom digital twinning,
               autonomous orchestration, synthetic telecom intelligence,
@@ -152,22 +152,22 @@ export default function SolutionsPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="glass rounded-[40px] p-10 border border-white/10"
+            className="rounded-[30px] md:rounded-[40px] p-5 sm:p-6 md:p-10 border border-white/10 bg-white/[0.03] backdrop-blur-xl"
           >
 
             {/* TOP CARDS */}
 
-            <div className="grid grid-cols-[1.1fr_0.9fr] gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 mb-6">
 
               {/* LEFT CARD */}
 
-              <div className="glass rounded-3xl p-6">
+              <div className="rounded-[24px] md:rounded-3xl p-6 border border-white/10 bg-white/[0.03]">
 
-                <p className="text-cyan-400 text-lg">
+                <p className="text-cyan-400 text-base md:text-lg">
                   AI Orchestration
                 </p>
 
-                <h3 className="text-4xl lg:text-5xl font-black mt-4 leading-tight">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black mt-4 leading-tight">
 
                   Autonomous
 
@@ -181,13 +181,13 @@ export default function SolutionsPage() {
 
               {/* RIGHT CARD */}
 
-              <div className="glass rounded-3xl p-6">
+              <div className="rounded-[24px] md:rounded-3xl p-6 border border-white/10 bg-white/[0.03]">
 
-                <p className="text-purple-400 text-lg">
+                <p className="text-purple-400 text-base md:text-lg">
                   Digital Twins
                 </p>
 
-                <h3 className="text-4xl lg:text-5xl font-black mt-4 leading-tight">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black mt-4 leading-tight">
 
                   Real-Time
 
@@ -203,25 +203,26 @@ export default function SolutionsPage() {
 
             {/* MAIN PANEL */}
 
-            <div className="h-[360px] rounded-[40px] border border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
+            <div className="min-h-[320px] md:h-[360px] rounded-[30px] md:rounded-[40px] border border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
 
-              <div className="text-center px-10">
+              <div className="text-center px-5 md:px-10">
 
                 <Activity
-                  size={90}
-                  className="mx-auto text-cyan-400 mb-8"
+                  size={70}
+                  className="mx-auto text-cyan-400 mb-6 md:mb-8 md:w-[90px] md:h-[90px]"
                 />
 
-                <h3 className="text-4xl font-black leading-tight">
+                <h3 className="text-3xl sm:text-4xl font-black leading-tight">
 
                   Continuous Telecom
+
                   <span className="block">
                     Intelligence
                   </span>
 
                 </h3>
 
-                <p className="text-gray-300 text-lg mt-5 leading-relaxed">
+                <p className="text-gray-300 text-base md:text-lg mt-5 leading-relaxed">
                   AI-native orchestration • digital twinning •
                   scalable experimentation • autonomous optimization
                 </p>
@@ -238,17 +239,17 @@ export default function SolutionsPage() {
 
       {/* SOLUTION CARDS */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <h2 className="text-5xl font-black">
+            <h2 className="text-4xl sm:text-5xl font-black">
               Industry Solutions
             </h2>
 
-            <p className="text-gray-400 text-xl mt-8 max-w-5xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-5xl mx-auto leading-relaxed">
               Built to solve operational complexity,
               AI scalability, and experimentation challenges
               across next-generation telecom ecosystems.
@@ -256,7 +257,7 @@ export default function SolutionsPage() {
 
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
 
             {solutions.map((item, i) => {
               const Icon = item.icon;
@@ -265,42 +266,42 @@ export default function SolutionsPage() {
                 <motion.div
                   key={i}
                   whileHover={{ y: -10 }}
-                  className="glass rounded-[40px] p-12 border border-white/10"
+                  className="rounded-[28px] md:rounded-[40px] p-6 md:p-12 border border-white/10 bg-white/[0.03]"
                 >
 
                   <Icon
-                    size={70}
-                    className="text-cyan-400 mb-8"
+                    size={60}
+                    className="text-cyan-400 mb-6 md:mb-8"
                   />
 
-                  <h3 className="text-4xl font-black mb-10">
+                  <h3 className="text-3xl md:text-4xl font-black mb-8 md:mb-10 leading-tight">
                     {item.title}
                   </h3>
 
-                  <div className="space-y-8">
+                  <div className="space-y-6 md:space-y-8">
 
                     <div>
-                      <p className="text-red-300 uppercase tracking-widest text-sm mb-3">
+                      <p className="text-red-300 uppercase tracking-widest text-xs md:text-sm mb-3">
                         Challenge
                       </p>
 
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                         {item.challenge}
                       </p>
                     </div>
 
                     <div>
-                      <p className="text-cyan-400 uppercase tracking-widest text-sm mb-3">
+                      <p className="text-cyan-400 uppercase tracking-widest text-xs md:text-sm mb-3">
                         ANNA-DTP Solution
                       </p>
 
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                         {item.solution}
                       </p>
                     </div>
 
                     <div>
-                      <p className="text-purple-400 uppercase tracking-widest text-sm mb-4">
+                      <p className="text-purple-400 uppercase tracking-widest text-xs md:text-sm mb-4">
                         Operational Impact
                       </p>
 
@@ -309,7 +310,7 @@ export default function SolutionsPage() {
                         {item.impact.map((point, idx) => (
                           <li
                             key={idx}
-                            className="flex gap-3 text-gray-300"
+                            className="flex gap-3 text-gray-300 text-sm sm:text-base"
                           >
                             <span className="text-cyan-400">•</span>
                             {point}
@@ -333,17 +334,17 @@ export default function SolutionsPage() {
 
       {/* OPERATIONAL INTELLIGENCE */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <h2 className="text-6xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
               Operational Intelligence Layer
             </h2>
 
-            <p className="text-gray-400 text-xl mt-8 max-w-5xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-5xl mx-auto leading-relaxed">
               ANNA-DTP is not a standalone simulator
               or static planning tool. The platform is designed
               as a continuous telecom intelligence layer enabling
@@ -353,7 +354,7 @@ export default function SolutionsPage() {
 
           </div>
 
-          <div className="grid lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 
             {[
               "Continuous Telecom Intelligence",
@@ -364,15 +365,15 @@ export default function SolutionsPage() {
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                className="rounded-[35px] p-10 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10 text-center"
+                className="rounded-[28px] md:rounded-[35px] p-6 md:p-10 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10 text-center"
               >
 
                 <ShieldCheck
-                  size={60}
-                  className="mx-auto text-cyan-400 mb-6"
+                  size={55}
+                  className="mx-auto text-cyan-400 mb-5 md:mb-6"
                 />
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-xl md:text-2xl font-bold leading-tight">
                   {item}
                 </h3>
 
@@ -387,15 +388,15 @@ export default function SolutionsPage() {
 
       {/* LONG TERM IMPACT */}
 
-      <section className="py-32">
+      <section className="py-20 md:py-32">
 
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 text-center">
 
-          <h2 className="text-6xl font-black">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
             Strategic Long-Term Impact
           </h2>
 
-          <p className="text-gray-300 text-2xl leading-relaxed max-w-5xl mx-auto mt-12">
+          <p className="text-gray-300 text-base sm:text-lg md:text-2xl leading-relaxed max-w-5xl mx-auto mt-8 md:mt-12">
             ANNA-DTP bridges the gap between telecom operational
             complexity and scalable AI-native decision intelligence,
             enabling autonomous orchestration, continuous telecom
@@ -403,20 +404,20 @@ export default function SolutionsPage() {
             and future 6G-native programmable ecosystems.
           </p>
 
-          <div className="mt-16 h-[380px] rounded-[50px] border border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
+          <div className="mt-12 md:mt-16 min-h-[320px] md:h-[380px] rounded-[32px] md:rounded-[50px] border border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
 
-            <div className="text-center px-10">
+            <div className="text-center px-5 md:px-10">
 
               <Zap
-                size={90}
-                className="mx-auto text-cyan-400 mb-8"
+                size={70}
+                className="mx-auto text-cyan-400 mb-6 md:mb-8 md:w-[90px] md:h-[90px]"
               />
 
-              <h3 className="text-5xl font-black">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
                 Future AI-Native Telecom Ecosystems
               </h3>
 
-              <p className="text-gray-300 text-xl mt-6 max-w-4xl">
+              <p className="text-gray-300 text-base md:text-xl mt-5 md:mt-6 max-w-4xl leading-relaxed">
                 Autonomous orchestration • programmable infrastructure •
                 scalable telecom intelligence • continuous optimization •
                 zero-touch operations

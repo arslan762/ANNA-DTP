@@ -104,11 +104,11 @@ export default function TechnologyPage() {
 
       {/* HERO SECTION */}
 
-      <section className="relative min-h-screen flex items-center border-b border-white/10">
+      <section className="relative min-h-screen flex items-center border-b border-white/10 overflow-hidden">
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,182,212,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.18),transparent_35%)]"></div>
 
-        <div className="max-w-[1450px] mx-auto px-8 py-32 grid lg:grid-cols-[1fr_1fr] gap-16 items-center relative z-10">
+        <div className="relative z-10 max-w-[1450px] mx-auto px-5 md:px-8 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
 
           {/* LEFT SIDE */}
 
@@ -116,11 +116,10 @@ export default function TechnologyPage() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="max-w-[700px]"
+            className="w-full max-w-[700px]"
           >
 
-            
-            <h1 className="text-5xl md:text-6xl lg:text-[82px] font-black leading-[0.92]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[82px] font-black leading-[1]">
 
               AI Native Network
 
@@ -136,13 +135,13 @@ export default function TechnologyPage() {
 
             {/* FULL FORM SECTION */}
 
-            <div className="mt-10 rounded-[28px] border border-cyan-500/20 bg-white/[0.03] backdrop-blur-xl p-8">
+            <div className="mt-8 md:mt-10 rounded-[24px] md:rounded-[28px] border border-cyan-500/20 bg-white/[0.03] backdrop-blur-xl p-5 sm:p-6 md:p-8">
 
-              <p className="text-cyan-400 text-sm tracking-[0.25em] uppercase mb-5">
+              <p className="text-cyan-400 text-xs sm:text-sm tracking-[0.25em] uppercase mb-4 md:mb-5">
                 Platform Definition
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-black leading-tight">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black leading-tight">
 
                 ANNA-DTP
 
@@ -158,7 +157,7 @@ export default function TechnologyPage() {
 
             </div>
 
-            <p className="text-gray-300 text-xl leading-relaxed mt-10 max-w-2xl">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mt-8 md:mt-10 max-w-2xl">
               ANNA-DTP combines digital twinning,
               scalable simulation, synthetic telecom intelligence,
               and autonomous orchestration into a unified REC architecture
@@ -173,22 +172,22 @@ export default function TechnologyPage() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="glass rounded-[40px] p-10 border border-white/10"
+            className="w-full rounded-[30px] md:rounded-[40px] p-5 sm:p-6 md:p-10 border border-white/10 bg-white/[0.03] backdrop-blur-xl"
           >
 
             {/* TOP CARDS */}
 
-            <div className="grid grid-cols-[1.15fr_1.15fr] gap-8 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mb-6 md:mb-8">
 
               {/* CARD 1 */}
 
-              <div className="glass rounded-3xl p-10 min-h-[260px] flex flex-col justify-between">
+              <div className="rounded-[24px] md:rounded-3xl p-6 md:p-10 min-h-[220px] md:min-h-[260px] border border-white/10 bg-white/[0.03] flex flex-col justify-between">
 
-                <p className="text-cyan-400 text-lg">
+                <p className="text-cyan-400 text-base md:text-lg">
                   AI Orchestration
                 </p>
 
-                <h3 className="text-4xl lg:text-[50px] font-black leading-[0.95]">
+                <h3 className="text-3xl sm:text-4xl lg:text-[50px] font-black leading-[1]">
 
                   Real-Time
 
@@ -202,13 +201,13 @@ export default function TechnologyPage() {
 
               {/* CARD 2 */}
 
-              <div className="glass rounded-3xl p-10 min-h-[260px] flex flex-col justify-between">
+              <div className="rounded-[24px] md:rounded-3xl p-6 md:p-10 min-h-[220px] md:min-h-[260px] border border-white/10 bg-white/[0.03] flex flex-col justify-between">
 
-                <p className="text-purple-400 text-lg">
+                <p className="text-purple-400 text-base md:text-lg">
                   Simulation
                 </p>
 
-                <h3 className="text-4xl lg:text-[50px] font-black leading-[0.95]">
+                <h3 className="text-3xl sm:text-4xl lg:text-[50px] font-black leading-[1]">
 
                   Distributed
 
@@ -224,16 +223,16 @@ export default function TechnologyPage() {
 
             {/* LARGE CARD */}
 
-            <div className="h-[360px] rounded-[40px] bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-white/10 flex items-center justify-center">
+            <div className="min-h-[320px] md:h-[360px] rounded-[30px] md:rounded-[40px] bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-white/10 flex items-center justify-center">
 
-              <div className="text-center px-8">
+              <div className="text-center px-5 md:px-8">
 
                 <Orbit
-                  size={90}
-                  className="mx-auto text-cyan-400 mb-8"
+                  size={70}
+                  className="mx-auto text-cyan-400 mb-6 md:mb-8 md:w-[90px] md:h-[90px]"
                 />
 
-                <h3 className="text-4xl font-black leading-tight">
+                <h3 className="text-3xl sm:text-4xl font-black leading-tight">
 
                   REC Digital Twin
 
@@ -243,7 +242,7 @@ export default function TechnologyPage() {
 
                 </h3>
 
-                <p className="text-gray-300 text-lg mt-5">
+                <p className="text-gray-300 text-base md:text-lg mt-4 md:mt-5">
                   Realism • Completeness • Efficiency
                 </p>
 
@@ -259,17 +258,17 @@ export default function TechnologyPage() {
 
       {/* TECHNOLOGY VISION */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <h2 className="text-6xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black">
               Technology Vision
             </h2>
 
-            <p className="text-gray-400 text-xl mt-8 max-w-5xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-5xl mx-auto leading-relaxed">
               ANNA-DTP is engineered as a continuously evolving telecom
               intelligence layer capable of integrating operational network
               data, AI workflows, scalable digital twins, and autonomous
@@ -278,7 +277,7 @@ export default function TechnologyPage() {
 
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6">
 
             {[
               "Real-Time Intelligence",
@@ -290,15 +289,15 @@ export default function TechnologyPage() {
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                className="glass rounded-[30px] p-8 text-center"
+                className="rounded-[24px] md:rounded-[30px] p-6 md:p-8 text-center border border-white/10 bg-white/[0.03]"
               >
 
                 <Cpu
-                  size={50}
-                  className="mx-auto text-cyan-400 mb-6"
+                  size={45}
+                  className="mx-auto text-cyan-400 mb-5 md:mb-6"
                 />
 
-                <h3 className="text-xl font-bold">
+                <h3 className="text-lg md:text-xl font-bold">
                   {item}
                 </h3>
 
@@ -313,24 +312,24 @@ export default function TechnologyPage() {
 
       {/* REC ARCHITECTURE */}
 
-      <section className="py-32 border-b border-white/10">
+      <section className="py-20 md:py-32 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-          <div className="text-center mb-24">
+          <div className="text-center mb-16 md:mb-24">
 
-            <h2 className="text-6xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black">
               REC Architecture
             </h2>
 
-            <p className="text-gray-400 text-xl mt-8 max-w-4xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl mt-6 md:mt-8 max-w-4xl mx-auto leading-relaxed">
               The foundational infrastructure framework enabling scalable
               telecom intelligence and digital twinning.
             </p>
 
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
 
             {architecture.map((item, i) => {
               const Icon = item.icon;
@@ -339,15 +338,15 @@ export default function TechnologyPage() {
                 <motion.div
                   key={i}
                   whileHover={{ y: -10 }}
-                  className="rounded-[40px] p-12 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10"
+                  className="rounded-[28px] md:rounded-[40px] p-8 md:p-12 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10"
                 >
 
                   <Icon
-                    size={70}
-                    className="text-cyan-400 mb-8"
+                    size={60}
+                    className="text-cyan-400 mb-6 md:mb-8"
                   />
 
-                  <h3 className="text-4xl font-black mb-8">
+                  <h3 className="text-3xl md:text-4xl font-black mb-6 md:mb-8">
                     {item.title}
                   </h3>
 
@@ -356,7 +355,7 @@ export default function TechnologyPage() {
                     {item.points.map((point, idx) => (
                       <li
                         key={idx}
-                        className="text-gray-300 flex gap-3"
+                        className="text-gray-300 flex gap-3 text-sm sm:text-base"
                       >
                         <span className="text-cyan-400">•</span>
                         {point}
