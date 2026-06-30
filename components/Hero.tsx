@@ -41,11 +41,28 @@ export default function Hero() {
           transition={{ duration: 1 }}
         >
 
-          <p className="uppercase tracking-[0.35em] text-cyan-400 mb-8 text-sm">
 
-            AI-NATIVE TELECOM INTELLIGENCE
+          {/* FULL FORM */}
 
-          </p>
+          <div className="mb-10">
+
+            <p className="text-gray-300 text-lg md:text-xl font-medium leading-relaxed">
+
+              <span className="text-cyan-400 font-bold">
+                ANNA-DTP
+              </span>{" "}
+
+              —
+
+              <span className="text-white font-semibold ml-2">
+                AI-Native Network Automation and Digital Twin Platform
+              </span>
+
+            </p>
+
+          </div>
+
+          {/* MAIN TITLE */}
 
           <h1 className="text-5xl md:text-6xl lg:text-[68px] font-black leading-[0.95] text-white">
 
@@ -62,6 +79,8 @@ export default function Hero() {
             </span>
 
           </h1>
+
+          {/* DESCRIPTION */}
 
           <p className="text-gray-300 text-xl leading-relaxed mt-10">
 

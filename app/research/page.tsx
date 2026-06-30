@@ -281,12 +281,11 @@ export default function ResearchPage() {
           <div className="text-center mb-24">
 
             <h2 className="text-6xl font-black">
-              Featured Publications
+              ANNA in Action
             </h2>
 
             <p className="text-gray-400 text-xl mt-8 max-w-4xl mx-auto">
-              Peer-reviewed research contributions supporting
-              scalable AI-native telecom ecosystems.
+              Publications underpinning ANNA-DTP in REC Engine Framework
             </p>
 
           </div>

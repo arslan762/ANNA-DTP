@@ -119,19 +119,44 @@ export default function TechnologyPage() {
             className="max-w-[700px]"
           >
 
-            <p className="uppercase tracking-[0.3em] text-cyan-400 mb-8">
-              Technology Architecture
-            </p>
-
+            
             <h1 className="text-5xl md:text-6xl lg:text-[82px] font-black leading-[0.92]">
 
-              AI-Native
+              AI Native Network
 
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
-                Telecom Intelligence
+                Automation Digital
+              </span>
+
+              <span className="block">
+                Twin Platform
               </span>
 
             </h1>
+
+            {/* FULL FORM SECTION */}
+
+            <div className="mt-10 rounded-[28px] border border-cyan-500/20 bg-white/[0.03] backdrop-blur-xl p-8">
+
+              <p className="text-cyan-400 text-sm tracking-[0.25em] uppercase mb-5">
+                Platform Definition
+              </p>
+
+              <h3 className="text-2xl md:text-3xl font-black leading-tight">
+
+                ANNA-DTP
+
+                <span className="block mt-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+                  AI Native Network Automation
+                </span>
+
+                <span className="block mt-2 text-white">
+                  Digital Twin Platform
+                </span>
+
+              </h3>
+
+            </div>
 
             <p className="text-gray-300 text-xl leading-relaxed mt-10 max-w-2xl">
               ANNA-DTP combines digital twinning,
@@ -159,41 +184,41 @@ export default function TechnologyPage() {
 
               <div className="glass rounded-3xl p-10 min-h-[260px] flex flex-col justify-between">
 
-  <p className="text-cyan-400 text-lg">
-    AI Orchestration
-  </p>
+                <p className="text-cyan-400 text-lg">
+                  AI Orchestration
+                </p>
 
-  <h3 className="text-4xl lg:text-[50px] font-black leading-[0.95]">
+                <h3 className="text-4xl lg:text-[50px] font-black leading-[0.95]">
 
-    Real-Time
+                  Real-Time
 
-    <span className="block">
-      Intelligence
-    </span>
+                  <span className="block">
+                    Intelligence
+                  </span>
 
-  </h3>
+                </h3>
 
-</div>
+              </div>
+
               {/* CARD 2 */}
 
               <div className="glass rounded-3xl p-10 min-h-[260px] flex flex-col justify-between">
 
-  <p className="text-purple-400 text-lg">
-    Simulation
-  </p>
+                <p className="text-purple-400 text-lg">
+                  Simulation
+                </p>
 
-  <h3 className="text-4xl lg:text-[50px] font-black leading-[0.95]">
+                <h3 className="text-4xl lg:text-[50px] font-black leading-[0.95]">
 
-    Distributed
+                  Distributed
 
-    <span className="block">
-      Systems
-    </span>
+                  <span className="block">
+                    Systems
+                  </span>
 
-  </h3>
+                </h3>
 
-</div>
-
+              </div>
 
             </div>
 
@@ -211,6 +236,7 @@ export default function TechnologyPage() {
                 <h3 className="text-4xl font-black leading-tight">
 
                   REC Digital Twin
+
                   <span className="block">
                     Architecture
                   </span>
@@ -342,138 +368,6 @@ export default function TechnologyPage() {
                 </motion.div>
               );
             })}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* CORE TECHNOLOGIES */}
-
-      <section className="py-32 border-b border-white/10">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="text-center mb-24">
-
-            <h2 className="text-6xl font-black">
-              Core Technologies
-            </h2>
-
-            <p className="text-gray-400 text-xl mt-8 max-w-4xl mx-auto">
-              Advanced AI-native telecom infrastructure technologies
-              powering scalable digital twin ecosystems.
-            </p>
-
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-
-            {technologies.map((tech, i) => {
-              const Icon = tech.icon;
-
-              return (
-                <motion.div
-                  key={i}
-                  whileHover={{ y: -10 }}
-                  className="glass rounded-[35px] p-10 border border-white/10"
-                >
-
-                  <Icon
-                    size={65}
-                    className="text-cyan-400 mb-8"
-                  />
-
-                  <h3 className="text-3xl font-black mb-6">
-                    {tech.title}
-                  </h3>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    {tech.desc}
-                  </p>
-
-                </motion.div>
-              );
-            })}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* PERFORMANCE */}
-
-      <section className="py-32">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="text-center mb-24">
-
-            <h2 className="text-6xl font-black">
-              Performance & Scalability
-            </h2>
-
-            <p className="text-gray-400 text-xl mt-8 max-w-4xl mx-auto">
-              Validated performance acceleration across
-              large-scale telecom digital twin environments.
-            </p>
-
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-
-            {metrics.map((metric, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10 }}
-                className="glass rounded-[40px] p-14 text-center"
-              >
-
-                <BarChart3
-                  size={70}
-                  className="mx-auto text-cyan-400 mb-8"
-                />
-
-                <h3 className="text-6xl font-black">
-                  {metric.value}
-                </h3>
-
-                <p className="text-gray-300 text-xl mt-6">
-                  {metric.label}
-                </p>
-
-              </motion.div>
-            ))}
-
-          </div>
-
-          <div className="mt-16 h-[360px] rounded-[50px] border border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
-
-            <div className="text-center px-10">
-
-              <Zap
-                size={90}
-                className="mx-auto text-cyan-400 mb-8"
-              />
-
-              <h3 className="text-5xl font-black leading-tight">
-
-                AI-Assisted Telecom
-                <span className="block">
-                  Intelligence
-                </span>
-
-              </h3>
-
-              <p className="text-gray-300 text-xl mt-6 max-w-4xl">
-                Distributed simulation • AI-assisted propagation •
-                scalable experimentation • closed-loop orchestration •
-                digital twin synchronization
-              </p>
-
-            </div>
 
           </div>
 
