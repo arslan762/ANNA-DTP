@@ -35,7 +35,7 @@ export default function Navbar() {
 
           <p className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition">
 
-            Powered by VORTEX Engine
+            Powered by REC Engine
 
           </p>
 
